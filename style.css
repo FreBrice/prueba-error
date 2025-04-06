@@ -1,0 +1,90 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    /* Fondo degradado lineal de plateado a azul */
+    background: linear-gradient(to bottom, #d3d3d3, #c47070); /* Plateado (#d3d3d3) a Azul claro (#add8e6) */
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Estilos iniciales para la posición del logo - puedes ajustarlos */
+    transform: translateY(100vh); /* Inicialmente fuera de la pantalla hacia abajo */
+    opacity: 0;
+    transition: transform 1s ease-out, opacity 1s ease-out; /* Transición suave */
+}
+
+.logo {
+    max-width: 200px; /* Ajusta el tamaño de tu logo */
+    height: auto;
+}
+
+.logo-container.animate {
+    transform: translateY(0); /* Animación hacia arriba */
+    opacity: 1;
+}
+
+.login-container {
+    background-color: #e8df35;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 20px; /* Espacio entre el logo (cuando se muestra) y el login */
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.login-container.show {
+    opacity: 1;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.login-container button[type="submit"] {
+    background-color: #473349; /* Un color primario */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.login-container button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.hidden {
+    display: none !important;
+}
