@@ -88,3 +88,17 @@ body {
 .hidden {
     display: none !important;
 }
+.error-message {
+    color: red;
+    font-size: 12px;
+    display: block;
+    margin-top: 5px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input:invalid {
+    border-color: red;
+}
